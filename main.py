@@ -31,21 +31,13 @@ rps_choice_string = input('***Welcome to Rock, Paper, Scissors***\nChoose 0 for 
 rps_choice = int(rps_choice_string)
 comp_rps_choice = random.randint(0,2)
 
-print('You chose:\n')
-if rps_choice == 0:
-  print(rock)
-elif rps_choice == 1: 
-  print(paper)
-elif rps_choice == 2:
-  print(scissors)
+game_choice = [rock, paper, scissors]
 
+print('You chose:\n')
+print(f'{game_choice[rps_choice]}')
 print('Computer chose:\n')
-if comp_rps_choice == 0:
-  print(rock)
-elif comp_rps_choice == 1:
-  print(paper)
-elif comp_rps_choice == 2:
-  print(scissors)
+print(f'{game_choice[comp_rps_choice]}')
+
 
 if comp_rps_choice == rps_choice:
   print('It was a draw.')
